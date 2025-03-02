@@ -18,9 +18,9 @@ class RouteSecureMiddleware
     {
         $apiKey = env('API_KEY');
         
-        // Verifica che la chiave API sia presente nelle intestazioni della richiesta
+       
         if ($request->header('X-API-KEY') !== $apiKey) {
-            return response()->json(['error' => 'Unauthorized'], 401); // Risposta di errore se la chiave non corrisponde
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
 
         return $next($request);

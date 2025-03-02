@@ -19,6 +19,6 @@ class Attende extends Model
 
     public function event()
     {
-        return $this->belongsTo(Event::class); // Un partecipante appartiene a un evento
+        return $this->belongsTo(Event::class); 
     }
 }
